@@ -1,93 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#050505" media="(prefers-color-scheme: dark)">
+    <meta name="description" content="Block Reaction is a New York studio for consulting and art production.">
+    <title>Block Reaction</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/site.css">
+  </head>
+  <body>
+    <button class="theme-toggle" type="button" aria-label="Use dark mode">
+      <svg class="sun" viewBox="0 0 24 24" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"></circle>
+        <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"></path>
+      </svg>
+      <svg class="moon" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M20.4 15.1A8.5 8.5 0 0 1 8.9 3.6a8.5 8.5 0 1 0 11.5 11.5Z"></path>
+      </svg>
+    </button>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>BlockReaction</title>
-  <meta name="keywords"
-    content="BlockReaction,Blockreaction.nyc,Consulting,antsankov,Alex Tsankov,Alexander Tsankov, open source,developer,personal,github">
-  <meta name="description" content="Block Reaction NYC consulting.">
-  <meta name="author" content="Alex Tsankov">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <link rel="stylesheet" href="./assets/base.css">
-  <link rel="stylesheet" href="./assets/skeleton.css">
-  <link rel="stylesheet" href="./assets/layout.css">
-  <link rel='icon' href='./favicon.ico' type='image/x-icon' />
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-57895312-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-57895312-2');
-  </script>
-  <!-- END GA -->
-</head>
+    <main>
+      <h1 class="logo">
+        <span>Block</span>
+        <span>Reaction</span>
+      </h1>
 
-<body>
-  <div class="container">
-    <div class="sixteen columns">
-      <h2 style="margin-top: 40px" class="remove-bottom">BlockReaction.nyc</h2>
-      <h5>Your resource for custom software and research.</h5>
-      <hr>
-    </div>
-    <div class="one-third column">
-      <h3>About</h3>
-      <table>
-        <p>Block Reaction specializes in the following areas:</p>
-        <div>• Develop early-stage software prototypes.</div>
-        <div>• Contribute to open source projects.</div>
-        <br>
-        <p>If you have a project in mind and would like to retain our services, don't hesitate to reach out!</p>
-        <tbody>
-          <tr>
-            <th>Location</th>
-            <td>
-              <span id="obf">New York, NY</span>
-            </td>
-          </tr>
-          <tr>
-            <th>Email</th>
-            <td>
-              <span id="obf">info ꓮТ blockreaction DՕТ nyc</span>
-            </td>
-          </tr>
-          <tr>
-            <th>LinkedIn</th>
-            <td>
-              <span id="obf"><a href="https://www.linkedin.com/company/block-reaction">Block Reaction</a></span>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="two-thirds column">
-      <h3>Projects</h3>
-      <ul class="square">
-        <li><strong>Columbia School of International and Public Affairs (SIPA) </strong>Completed a master's capstone project exploring the policy actions US states (AZ, NY, OH, CA, SC, TX) can take to assist with the federal CHIPS act program. Conducted extensive interviews and analysis of the domestic semiconductor space. <a href="./assets/docs/columbia-chips-act-state-policy.pdf">(Paper)</a></li>
-        <td>
-          <img src="./assets/pics/wafer.jpg" height="125">
-        </td>
-        <li><strong>Astrolabe Genetics: </strong>Created an ETL (extract,transform,learn) pipeline to perform repeatable genetic analysis for patients.</li>
-        <td>
-          <img src="./assets/pics/astrolabe.png" height="75">
-        </td>
-        <li><strong>Astor Testnet: </strong>Created a Keccak-256 based proof of work Ethereum testnet, as well as mining software, from a Parity node fork.</li>
-        <td>
-          <img src="./assets/pics/astor.jpg" height="100">
-        </td>
-        <li><strong>Satoshi Prayer Terminal: </strong>Art project created for the 2018 Ethereal Summit. Featured in Vice News</li>
-        <td>
-        <video autoplay loop muted playsinline height="200">
-          <source src="./assets/pics/prayer.mp4" type="video/mp4" >
-      </video>
-    </td>
-    </div>
-    <div class="sixteen columns" style="margin-bottom: 15px;">
-      <hr>
-      <a href="https://github.com/antsankov/blockreaction.nyc">Site Source Code</a>
-    </div>
-  </div>
-  </div>
-</body>
+      <div class="details">
+        <p class="studio-meta">
+          <span>Milan &amp; Brooklyn</span>
+          <span>Established 2018</span>
+        </p>
+        <p class="contact">
+          <span>Contact:</span>
+          <span aria-label="info at blockreaction dot nyc">
+            info <span aria-hidden="true">ꓮТ</span><span class="sr-only"> at </span>
+            blockreaction <span aria-hidden="true">DՕТ</span><span class="sr-only"> dot </span> nyc
+          </span>
+        </p>
+      </div>
+    </main>
+
+    <script>
+      const root = document.documentElement;
+      const toggle = document.querySelector('.theme-toggle');
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+      function activeTheme() {
+        return root.dataset.theme || (systemTheme.matches ? 'dark' : 'light');
+      }
+
+      function updateToggle() {
+        const isDark = activeTheme() === 'dark';
+        toggle.setAttribute('aria-label', `Use ${isDark ? 'light' : 'dark'} mode`);
+        toggle.setAttribute('aria-pressed', String(isDark));
+      }
+
+      toggle.addEventListener('click', () => {
+        root.dataset.theme = activeTheme() === 'dark' ? 'light' : 'dark';
+        updateToggle();
+      });
+
+      systemTheme.addEventListener('change', updateToggle);
+      updateToggle();
+    </script>
+  </body>
 </html>

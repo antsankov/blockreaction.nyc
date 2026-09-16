@@ -1,0 +1,221 @@
+:root {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #050505;
+  --muted: #646464;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --background: #050505;
+    --foreground: #fafafa;
+    --muted: #a7a7a7;
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #050505;
+  --muted: #646464;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --background: #050505;
+  --foreground: #fafafa;
+  --muted: #a7a7a7;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  background: var(--background);
+}
+
+body {
+  min-height: 100svh;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+main {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: clamp(1.25rem, 4vw, 3rem);
+}
+
+.logo {
+  margin: 0;
+  width: min(700px, calc(100vw - clamp(2.5rem, 8vw, 6rem)));
+  container-type: inline-size;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 0.82;
+}
+
+.logo > span {
+  display: block;
+  font-size: 24.285cqw;
+  /* Add roughly 10% to Arial Bold's stem thickness at every logo size. */
+  -webkit-text-stroke: 0.010em currentColor;
+}
+
+.logo > span:first-child {
+  letter-spacing: -0.052em;
+}
+
+.logo > span:last-child {
+  letter-spacing: -0.052em;
+}
+
+.details {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: clamp(5rem, 18vh, 12rem);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.45;
+}
+
+.details p {
+  margin: 0;
+}
+
+.studio-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--muted);
+  text-align: left;
+}
+
+.studio-meta span:first-child {
+  color: var(--foreground);
+}
+
+.studio-meta span:last-child {
+  font-size: 0.78em;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact {
+  color: var(--muted);
+  text-align: right;
+}
+
+.contact > span:first-child {
+  color: var(--foreground);
+}
+
+.theme-toggle {
+  position: fixed;
+  z-index: 10;
+  top: clamp(1rem, 3vw, 2rem);
+  right: clamp(1rem, 3vw, 2rem);
+  width: 2.75rem;
+  height: 2.75rem;
+  padding: 0.65rem;
+  border: 1px solid color-mix(in srgb, var(--foreground) 24%, transparent);
+  border-radius: 50%;
+  background: var(--background);
+  color: var(--foreground);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--foreground);
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--foreground);
+  outline-offset: 3px;
+}
+
+.theme-toggle svg {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.8;
+}
+
+.moon,
+:root[data-theme="dark"] .sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .moon {
+  display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .sun {
+    display: none;
+  }
+
+  :root:not([data-theme="light"]) .moon {
+    display: block;
+  }
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (max-width: 620px) {
+  main {
+    padding: 1.25rem;
+  }
+
+  .logo {
+    padding-top: 3.75rem;
+    width: 100%;
+  }
+
+  .details {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .studio-meta {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .contact {
+    text-align: left;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    transition: none;
+  }
+}
