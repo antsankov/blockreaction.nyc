@@ -118,10 +118,22 @@ main {
   text-align: right;
 }
 
-.productions-link {
+.productions-link,
+.productions-link:visited {
   color: var(--foreground);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.3em;
+}
+
+.link-arrow {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.1em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .contact > span:first-child {
