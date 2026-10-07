@@ -118,6 +118,12 @@ main {
   text-align: right;
 }
 
+.productions-link {
+  color: var(--foreground);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.3em;
+}
+
 .contact > span:first-child {
   color: var(--foreground);
 }
